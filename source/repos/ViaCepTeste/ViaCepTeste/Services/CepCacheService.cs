@@ -20,7 +20,9 @@ namespace ViaCepTeste.Services
         {
             ceps = await InsertCepIntoList(cep, ceps);
             cache.Set(key, ceps, SetMemoryOptions());
-            return ceps.FirstOrDefault(x => x.cep.Replace("-", "") == cep.Cep);
+            var result = ceps.FirstOrDefault(x => x.cep.Replace("-", "") == cep.Cep);
+            result.Origem = "ViaCep";
+            return result;
         }
         private async Task<List<CepResult>> InsertCepIntoList(CepModel cep, List<CepResult> ceps)
         {

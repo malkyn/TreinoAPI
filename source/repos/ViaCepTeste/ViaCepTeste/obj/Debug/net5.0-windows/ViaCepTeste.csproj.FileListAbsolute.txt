@@ -45,3 +45,8 @@ C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\Mic
 C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
 C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\Microsoft.OpenApi.dll
+C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\marco\source\repos\ViaCepTeste\ViaCepTeste\obj\Debug\net5.0-windows\ViaCepTeste.MvcApplicationPartsAssemblyInfo.cs

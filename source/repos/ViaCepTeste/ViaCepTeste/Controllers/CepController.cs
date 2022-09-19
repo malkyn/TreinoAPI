@@ -25,17 +25,19 @@ namespace ViaCep.Controllers
 
         [HttpPost("GetCep")]
         [Authorize(Roles = "admin")]
-        public async Task<ActionResult> GetCep([FromBody] CepModel cep, List<CepResult> ceps)
+        public async Task<ActionResult> GetCep([FromBody] CepModel cep)
         {
             if (_cache.TryGetValue(cep_key, out List<CepResult> cepsL))
             {
-                var result = cepsL.FirstOrDefault(x => x.cep.Replace("-", "") == cep.Cep).Origem = "Cache";
+                var result = cepsL.FirstOrDefault(x => x.cep.Replace("-", "") == cep.Cep);
                 if (result != null)
-                    return Ok(cepsL);
+                {
+                    result.Origem = "Cache";
+                    return Ok(result);
+                }
+                    
             }
-            await _cacheService.SetCache(cep_key, _cache, cep, ceps);
-            ceps.FirstOrDefault(x => x.cep.Replace("-", "") == cep.Cep).Origem = "ViaCep";
-            return Ok(ceps);
+            return Ok(await _cacheService.SetCache(cep_key, _cache, cep, cepsL));
         }
 
     }

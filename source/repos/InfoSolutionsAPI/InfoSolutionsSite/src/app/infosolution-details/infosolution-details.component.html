@@ -1,0 +1,32 @@
+<div class="jumbotron py-3">
+  <h1 class="display-4 text-center">INFO</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <table class="tabçe">
+      <thead class="thead-light">
+        <tr>
+          <th>Usuario</th>
+          <th>Senha</th>
+          <th>Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let is of service.list">
+          <td>{{is.Usuario}}</td>
+          <td>{{is.Senha}}</td>
+          <td>{{is.Token}}</td>
+          <td>
+            <i class="far fa-trash-alt fa-lg text-danger"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <app-infosolution-detail-form></app-infosolution-detail-form>
+  </div>
+</div>
+
+
